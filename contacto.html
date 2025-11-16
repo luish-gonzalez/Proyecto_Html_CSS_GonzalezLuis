@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundación Patitas Felices - Contacto</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Encabezado principal -->
+  <header class="site-header">
+    <div class="logo">
+      <a href="index.html">Patitas Felices</a>
+    </div>
+
+    <!-- Checkbox oculto que controla el menú -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+    <!-- Botón hamburguesa -->
+    <label for="menu-toggle" class="menu-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">Abrir o cerrar menú de navegación</span>
+    </label>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="adopta.html">Adopta</a></li>
+        <li><a href="index.html#donaciones">Donaciones</a></li>
+        <li><a href="index.html#voluntariado">Voluntariado</a></li>
+        <li><a href="contacto.html" class="is-active">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro-contacto">
+      <h1>Contacto</h1>
+      <p>
+        Si quieres adoptar, apoyar con donaciones, ser voluntario o tienes dudas sobre la fundación, escríbenos a través
+        del formulario o usa los medios de contacto directo.
+      </p>
+    </section>
+
+    <section class="contacto-contenido">
+      <article class="contacto-info">
+        <h2>Información de contacto</h2>
+        <p><strong>Correo:</strong> contacto@patitasfelices.org</p>
+        <p><strong>Teléfono:</strong> +57 300 000 0000</p>
+        <p><strong>Ciudad:</strong> Bucaramanga, Colombia</p>
+
+        <h3>Síguenos</h3>
+        <ul class="contacto-redes">
+          <li><a href="#" aria-label="Facebook Fundación Patitas Felices">Facebook</a></li>
+          <li><a href="#" aria-label="Instagram Fundación Patitas Felices">Instagram</a></li>
+          <li><a href="#" aria-label="TikTok Fundación Patitas Felices">TikTok</a></li>
+        </ul>
+      </article>
+
+      <section class="contacto-formulario" aria-labelledby="titulo-form-contacto">
+        <h2 id="titulo-form-contacto">Formulario de contacto</h2>
+        <p class="nota-obligatorios"><span class="asterisco">*</span> Campos obligatorios</p>
+
+        <form class="form-contacto" novalidate>
+          <div class="campo">
+            <label for="nombre">Nombre <span class="asterisco">*</span></label>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+            <p class="mensaje-estado mensaje-error-ejemplo">Ejemplo de mensaje de error (campo vacío).</p>
+          </div>
+
+          <div class="campo">
+            <label for="apellidos">Apellidos <span class="asterisco">*</span></label>
+            <input id="apellidos" name="apellidos" type="text" placeholder="Tus apellidos" required />
+          </div>
+
+          <div class="campo">
+            <label for="ciudad">Ciudad <span class="asterisco">*</span></label>
+            <input id="ciudad" name="ciudad" type="text" placeholder="Ciudad donde vives" required />
+          </div>
+
+          <div class="campo">
+            <label for="email">Correo electrónico <span class="asterisco">*</span></label>
+            <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
+          </div>
+
+          <div class="campo">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input id="telefono" name="telefono" type="tel" placeholder="+57 300 000 0000" />
+          </div>
+
+          <div class="campo">
+            <label for="tipo-consulta">Tipo de consulta <span class="asterisco">*</span></label>
+            <select id="tipo-consulta" name="tipo-consulta" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="adopcion">Adopción</option>
+              <option value="donacion">Donación</option>
+              <option value="voluntariado">Voluntariado</option>
+              <option value="informacion">Información general</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="mensaje">Mensaje <span class="asterisco">*</span></label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos en qué podemos ayudarte" required></textarea>
+          </div>
+
+          <div class="estado-formulario">
+            <p class="mensaje-estado mensaje-exito-ejemplo">
+              Ejemplo de mensaje de éxito: tu mensaje se envió correctamente.
+            </p>
+          </div>
+
+          <button type="submit" class="btn btn-principal">Enviar mensaje</button>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-fundacion">Fundación Patitas Felices</p>
+    <p class="footer-copy">© 2025 - Todos los derechos reservados</p>
+    <p class="footer-contacto">contacto@patitasfelices.org</p>
+    <p class="footer-dev">
+      Desarrollado por <a href="#" target="_blank" rel="noopener">Equipo Web Patitas</a>
+    </p>
+  </footer>
+</body>
+</html>

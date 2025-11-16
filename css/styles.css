@@ -84,6 +84,26 @@ a {
   font-weight: 600;
 }
 
+.menu-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-toggle-label {
+  display: none; /* Por defecto oculto (solo lo mostramos en mobile) */
+  cursor: pointer;
+}
+
+.menu-toggle-label span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 4px 0;
+  background-color: #333333;
+  border-radius: 999px;
+}
+
 .btn {
   display: inline-block;
   padding: 0.6rem 1.2rem;
@@ -155,31 +175,73 @@ a {
 
 .carousel-principal {
   padding: 2rem 1rem;
+  position: relative;
 }
 
 .carousel-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  position: relative;
+  max-width: 100%;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 1rem;
 }
 
 .slide {
-  border-radius: 1rem;
-  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   background-color: #000000;
+  animation: carrusel 9s infinite;
 }
 
 .slide img {
   width: 100%;
-  height: 220px;
+  height: 100%;
   object-fit: cover;
 }
 
 .slide figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   padding: 0.75rem 1rem;
   font-size: 0.9rem;
   color: #ffffff;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+@keyframes carrusel {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.slide-1 {
+  animation-delay: 0s;
+}
+
+.slide-2 {
+  animation-delay: 3s;
+}
+
+.slide-3 {
+  animation-delay: 6s;
 }
 
 .secciones-destacadas {
@@ -403,6 +465,168 @@ a {
   align-self: flex-start;
 }
 
+.intro-contacto {
+  padding: 2.5rem 1rem 1rem;
+  text-align: center;
+}
+
+.intro-contacto h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.intro-contacto p {
+  max-width: 38rem;
+  margin: 0 auto;
+  color: #555555;
+}
+
+.contacto-contenido {
+  padding: 1.5rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contacto-info h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.contacto-info p {
+  margin: 0.25rem 0;
+}
+
+.contacto-redes {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.contacto-redes a {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background-color: #ffffff;
+  border: 1px solid #ff6b35;
+}
+
+.contacto-formulario h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.nota-obligatorios {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  color: #666666;
+}
+
+.asterisco {
+  color: #d7263d;
+}
+
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.campo label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cccccc;
+  font: inherit;
+  background-color: #ffffff;
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+.mensaje-estado {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.mensaje-error-ejemplo {
+  color: #d7263d;
+}
+
+.mensaje-exito-ejemplo {
+  color: #237a3b;
+}
+
+/* Campo requerido vacío (placeholder visible) */
+.campo input:required:placeholder-shown,
+.campo textarea:required:placeholder-shown,
+.campo select:required:invalid {
+  border-color: #f0b4b4;
+  background-color: #fff5f5;
+}
+
+/* Campo válido */
+.campo input:required:valid,
+.campo textarea:required:valid,
+.campo select:required:valid {
+  border-color: #8fd19e;
+  background-color: #f3fff6;
+}
+
+.campo.error input,
+.campo.error textarea,
+.campo.error select {
+  border-color: #d7263d;
+  background-color: #fff5f5;
+}
+
+.campo.success input,
+.campo.success textarea,
+.campo.success select {
+  border-color: #237a3b;
+  background-color: #f3fff6;
+}
+
+.site-footer {
+  padding: 1.5rem 1rem;
+  background-color: #222222;
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.site-footer a {
+  color: #ffcf99;
+}
+
+.footer-fundacion {
+  font-weight: 600;
+}
+
+.footer-copy,
+.footer-contacto,
+.footer-dev {
+  margin: 0;
+}
+
 /* Tablet */
 @media (min-width: 601px) and (max-width: 1023px) {
   .hero {
@@ -423,7 +647,7 @@ a {
     margin-inline: auto;
   }
 
-  .carousel-inner {
+  /* .carousel-inner {
     flex-direction: row;
     overflow-x: auto;
   }
@@ -431,7 +655,7 @@ a {
   .slide {
     min-width: 70%;
     flex: 0 0 auto;
-  }
+  } */
 
   .secciones-grid {
     flex-direction: row;
@@ -455,6 +679,15 @@ a {
 
   .relacionados-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+    padding-inline: 2rem;
   }
 
 }
@@ -494,10 +727,10 @@ a {
     padding: 3rem 2rem;
   }
 
-  .carousel-inner {
+  /* .carousel-inner {
     flex-direction: row;
     gap: 1.5rem;
-  }
+  } */
 
   .slide {
     min-width: 32%;
@@ -554,4 +787,65 @@ a {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+    .site-footer {
+    padding: 1.75rem 2rem;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .site-header {
+    position: relative;
+  }
+
+  /* Mostrar icono hamburguesa en mobile */
+  .menu-toggle-label {
+    display: block;
+  }
+
+  /* Menú oculto por defecto en mobile */
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    display: none;
+    padding: 0.75rem 1rem 1rem;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .main-nav a {
+    padding: 0.4rem 0;
+  }
+
+  /* Cuando el checkbox está marcado, el menú se muestra */
+  .menu-toggle:checked + .menu-toggle-label + .main-nav {
+    display: block;
+  }
+}
+
+@media (min-width: 601px) {
+
+  .menu-toggle-label {
+    display: none;
+  }
+
+  .main-nav {
+    position: static;
+    display: block;
+    padding: 0;
+  }
+
+  .main-nav ul {
+    flex-direction: row;
+  }
 }
