@@ -84,6 +84,26 @@ a {
   font-weight: 600;
 }
 
+.menu-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-toggle-label {
+  display: none; /* Por defecto oculto (solo lo mostramos en mobile) */
+  cursor: pointer;
+}
+
+.menu-toggle-label span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 4px 0;
+  background-color: #333333;
+  border-radius: 999px;
+}
+
 .btn {
   display: inline-block;
   padding: 0.6rem 1.2rem;
@@ -773,4 +793,59 @@ a {
     gap: 2rem;
   }
 
+}
+
+@media (max-width: 600px) {
+
+  .site-header {
+    position: relative;
+  }
+
+  /* Mostrar icono hamburguesa en mobile */
+  .menu-toggle-label {
+    display: block;
+  }
+
+  /* Menú oculto por defecto en mobile */
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    display: none;
+    padding: 0.75rem 1rem 1rem;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .main-nav a {
+    padding: 0.4rem 0;
+  }
+
+  /* Cuando el checkbox está marcado, el menú se muestra */
+  .menu-toggle:checked + .menu-toggle-label + .main-nav {
+    display: block;
+  }
+}
+
+@media (min-width: 601px) {
+
+  .menu-toggle-label {
+    display: none;
+  }
+
+  .main-nav {
+    position: static;
+    display: block;
+    padding: 0;
+  }
+
+  .main-nav ul {
+    flex-direction: row;
+  }
 }
