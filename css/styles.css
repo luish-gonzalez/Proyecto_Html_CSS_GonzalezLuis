@@ -260,6 +260,42 @@ a {
   gap: 1.25rem;
 }
 
+/* VISION Y MISION INICIO */
+.vision-mision {
+  padding: 2.5rem 1rem 3rem;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bloque-vision,
+.bloque-mision {
+  background-color: #f7f7f7;
+  border-radius: 1rem;
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.bloque-vision h3,
+.bloque-mision h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.bloque-vision p,
+.bloque-mision p {
+  margin: 0;
+  color: #555555;
+}
+
+.vision-icono {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+/* VISION Y MISION FIN */
+
 .tarjeta-destacada {
   background-color: #ffffff;
   border-radius: 1rem;
@@ -792,6 +828,21 @@ a {
     flex-wrap: nowrap;
     gap: 2rem;
   }
+
+  /* VISION Y MISION INICIO */
+
+  .vision-mision {
+    padding: 3rem 2rem 3.5rem;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  .bloque-vision,
+  .bloque-mision {
+    flex: 1;
+  }
+  /* VISION Y MISION FIN */
 
 }
 
