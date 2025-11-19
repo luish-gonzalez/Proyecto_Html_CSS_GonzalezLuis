@@ -27,3 +27,28 @@ contacto.
 │   ├── img/
 │   └── wireframes/
 └── README.md
+
+## Instrucciones de ejecución
+
+1. Descarga o clona este repositorio.
+2. Abre la carpeta del proyecto.
+3. Haz doble clic en `index.html` para abrirlo en tu navegador.
+4. Navega entre las páginas usando el menú superior.
+
+Opcional:
+- Puedes usar la extensión *Live Server* de Visual Studio Code para recargar los cambios automáticamente mientras editas.
+
+## Capturas de pantalla
+
+### Home (Vista Desktop)
+![Home Desktop](assets/capturas/home-desktop.png)
+
+### Adopta (Vista Desktop)
+![Adopta Desktop](assets/capturas/adopta-desktop.png)
+
+### Perfil de Animal (Vista Desktop)
+![Perfil Desktop](assets/capturas/perfil-desktop.png)
+
+### Contacto (Vista Mobile)
+![Contacto Mobile](assets/capturas/contacto-mobile.png)
+
