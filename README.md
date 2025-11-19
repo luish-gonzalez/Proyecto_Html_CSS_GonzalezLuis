@@ -13,21 +13,6 @@ contacto.
   - Tablet: 601px – 1023px
   - Desktop: ≥ 1024px
 
-## Estructura de carpetas
-
-```text
-.
-├── index.html
-├── adopta.html
-├── perfil-animal.html
-├── contacto.html
-├── css/
-│   └── styles.css
-├── assets/
-│   ├── img/
-│   └── wireframes/
-└── README.md
-
 ## Instrucciones de ejecución
 
 1. Descarga o clona este repositorio.
@@ -51,4 +36,19 @@ Opcional:
 
 ### Contacto (Vista Mobile)
 ![Contacto Mobile](assets/capturas/contacto-mobile.png)
+
+## Estructura de carpetas
+
+```text
+.
+├── index.html
+├── adopta.html
+├── perfil-animal.html
+├── contacto.html
+├── css/
+│   └── styles.css
+├── assets/
+│   ├── img/
+│   └── wireframes/
+└── README.md
 
